@@ -7,6 +7,7 @@ class ProjectBacker
   def initialize(project, backer)
     @project = project
     @backer = backer
+    ProjectBacker.all << self
   end
   
   def self.all
