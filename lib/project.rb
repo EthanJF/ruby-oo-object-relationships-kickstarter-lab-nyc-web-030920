@@ -10,6 +10,12 @@ class Project
     ProjectBacker.new(self, backer)
   end
   
-  def backed_project_instances
+  def project_backer_instances
+    ProjectBacker.all.select{|project_backer_instance| project_backer_instance.project == self}
+  end
+  
+  def backers
+    project_backer_instances.map{|project_backer_instance| project_backer_instance.backer}
+  end
   
 end
