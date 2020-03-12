@@ -10,6 +10,6 @@ class Project
     ProjectBacker.new(self, backer)
   end
   
-  
+  def backed_project_instances
   
 end
